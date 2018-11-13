@@ -1,0 +1,32 @@
+ul li {
+    background-color: #00FF00;
+}
+
+.submenu a {
+    text-decoration: none;
+}
+
+aside h1 {
+    font-size: 0.6em;
+}
+
+p.lorem span {
+    font-weight: bold;
+}
+
+span[title] {
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+}
+
+span.title {
+    text-align: center;
+    color: red;
+}
+
+.menu + li {
+    
+}
