@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Page Title</title>
+    </head>
+    <body>
+        <form action="http://www.example.org" method="GET">
+            <input type="text" name="nom" placeholder="Nom">
+            <input type="text" name="prenom" placeholder="Prénom">
+            <input type="number" name="age" placeholder="Age">
+            <input type="email"  name="email" placeholder="Email">
+            <!-- fieldset sert à regrouper des éléments html de formulaires -->
+            <fieldset>
+                <p> Précisez votre sexe</p>
+                <label for="Fe">F</label>
+                <input type="radio" name="sexe" value="F" id="Fe">
+                <label for="Me">M</label>
+                <input type="radio" name="sexe" value="M" id="Me">
+            </fieldset>
+            <input type="date" name="ddn" placeholder="date de naissance">
+            <label for="newsletter">newsletter</label>
+            <input type="checkbox" name="newsletter" id="newsletter" checked>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </body>
+</html>
