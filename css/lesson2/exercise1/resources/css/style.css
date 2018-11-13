@@ -6,8 +6,8 @@ ul li {
     text-decoration: none;
 }
 
-aside.left > h1 {
-    font-size: .6em;
+aside h1 {
+    font-size: 0.6em;
 }
 
 p.lorem span {
@@ -18,7 +18,7 @@ span[title] {
     font-style: italic;
 }
 
-* p {
+p {
     text-align: justify;
 }
 
