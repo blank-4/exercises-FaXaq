@@ -1,0 +1,92 @@
+/*Donner des couleurs vives aux éléments de structure (<header>, <main>, <footer> ...) pour pouvoir bien les identifier.*/
+header{
+    background-color: red;
+}
+
+main{
+    background-color: green;
+}
+
+footer{
+    background-color: blue;
+}
+
+nav{
+    background-color: yellow;
+}
+
+aside.summary{
+    background-color: blueviolet;
+}
+
+aside.ads{
+    background-color: brown;
+}
+
+/*Quand la largeur de l'écran est supérieure à 900px :
+
+Faire un layout à 3 colonnes : sommaire à gauche, contenu (articles au milieu), publicité à droite.
+Faire un menu horizontal*/
+
+@media screen and (min-width: 900px) {
+    .wrapper{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+    }
+
+    .summary{
+        order:1;
+        flex-grow: 1;
+    }
+
+    main{
+        order:2;
+        flex-grow: 1;
+    }
+    .ads{
+        order:3;
+        flex-grow: 2;
+    }
+    nav li{
+        display: inline-block;
+    }
+}
+
+/* Quand la largeur de l'écran est inférieure à 900px et supérieure à 600px :
+
+Rendre le menu vertical
+Faire un layout à 2colonnes en cachant le sommaire. */ 
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .wrapper { 
+        display: flex; 
+        flex-direction: row;
+    }
+
+    .summary { 
+        display: none;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+}
+
+/* Quand la largeur de l'écran est inférieure à 600px : Cacher le menu
+Afficher la publicité en premier puis le contenu, les uns sous les autres */ 
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        display: flex; 
+        flex-direction: column;
+    }
+    
+    .ads {
+        order: -1;
+    }
+
+    nav {
+        display: none;
+    }
+}
