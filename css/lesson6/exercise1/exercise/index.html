@@ -1,0 +1,38 @@
+<!-- Créer un fichier HTML contenant :
+* Une nav avec des liens qui font référence à des sections sous-jacentes
+* Ces sections doivent s'afficher uniquement lorsque l'on clique sur le lien
+* Mettre un hover sur le nav avec une transition de 0.3s sur la couleur et la couleur de fond
+* Permettre de fermer les sections ouvertes avec un lien-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#section1">section1</a></li>
+            <li><a href="#section2">section2</a></li>
+            <li><a href="#section3">section3</a></li>           
+        </ul>
+    </nav>
+    <main>
+        <section id="section1" class="section-hidden">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia praesentium, reprehenderit, distinctio, ratione facere illo doloremque voluptates provident nam optio accusamus. Ea vero doloremque ipsum, nam error aperiam hic eligendi.</p>
+            <a href="#">fermer section1</a>
+        </section>
+        <section id="section2" class="section-hidden">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia praesentium, reprehenderit, distinctio, ratione facere illo doloremque voluptates provident nam optio accusamus. Ea vero doloremque ipsum, nam error aperiam hic eligendi.</p> 
+            <a href="#">fermer section2</a>
+        </section>
+        <section id="section3" class="section-hidden">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia praesentium, reprehenderit, distinctio, ratione facere illo doloremque voluptates provident nam optio accusamus. Ea vero doloremque ipsum, nam error aperiam hic eligendi.</p>
+            <a href="#">fermer section3</a>
+        </section>
+    </main>
+</body>
+</html>

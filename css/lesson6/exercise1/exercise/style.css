@@ -1,0 +1,23 @@
+.section-hidden {
+    display: none;
+}
+
+.section-hidden:target {
+    display:initial;
+}
+
+nav {
+    transition: background-color 0.3s;
+}
+
+nav ul li a {
+    transition: color 0.3s;
+}
+
+nav:hover {
+    background-color: aqua;
+}
+
+nav:hover ul li a {
+    color: brown;
+}
