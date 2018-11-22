@@ -1,0 +1,18 @@
+@media screen and (max-width: 200px) {
+    p {
+        color:red;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+    p {
+        color:yellow;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    p {
+        color:green;
+    }
+}
