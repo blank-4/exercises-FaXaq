@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    height: 300vh;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    background-color: yellow;
+    left: -20vw;
+    top: 0px;
+    transition: left 3s;
+}
+
+header.jumbotron {
+    width: 100%;
+    height: 25vh; /* le pourcentage ne fonctionne pas parce qu'il se réfère au body, qui au stade du header n'a pas de taille de contenu */ 
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+#menu-label {
+    background-color: red;
+    position: fixed;
+    border-radius: 100%;
+    left: 0px;
+    padding: 20px;
+    transition: left 3s;
+}
+
+#menu-label::before {
+    content: 'Open';
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+/* etat checkbox 1 */
+#menu-checkbox:checked ~ ul {
+    left: 0;
+}
+
+#menu-checkbox:checked + #menu-label {
+    left: 20vw;
+}
+
+#menu-checkbox:checked + #menu-label::before {
+    content: 'Close';
+}
