@@ -14,16 +14,14 @@ var nb2 = 6;
 var nb3 = nb1 + nb2;
 console.log("Le résultat de :" + nb1 + "+" + nb2 + " est " + nb3);
 
-var nb3 = nb1 - nb2;
+nb3 = nb1 - nb2;
 console.log("Le résultat de :" + nb1 + "-" + nb2 + " est " + nb3);
 
-var nb3 = nb1 * nb2;
+nb3 = nb1 * nb2;
 console.log("Le résultat de :" + nb1 + "*" + nb2 + " est " + nb3);
 
-var nb3 = nb1 / nb2;
+nb3 = nb1 / nb2;
 console.log("Le résultat de :" + nb1 + "/" + nb2 + " est " + nb3);
 
-var nb3 = nb1 % nb2;
+nb3 = nb1 % nb2;
 console.log("Le résultat de :" + nb1 + "%" + nb2 + " est " + nb3);
-
-
