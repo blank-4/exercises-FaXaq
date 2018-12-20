@@ -1,0 +1,31 @@
+aside {
+  background-color: yellow;
+}
+
+header {
+  background-color: green;
+}
+
+main {
+  background-color : blue;
+}
+
+footer {
+  background-color : red;
+}
+
+body {
+  height : 100vh;
+}
+
+.container-fluid {
+  height : 100%;
+}
+
+.container-fluid .row:nth-child(1), .container-fluid .row:nth-child(3) {
+  height : 25%;
+}
+
+.container-fluid .row:nth-child(2) {
+  height : 50%;
+}
