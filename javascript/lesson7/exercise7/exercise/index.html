@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lesson 7 - Exercise 7</title>
+  </head>
+  <body>
+    <!-- Component template -->
+    <div id="app">
+      <form>
+        <div>
+          <label for="input">Valeur à chiffrer</label><input v-model="input" id="input" name="input" type="text" placeholder="Texte à chiffrer" />
+        </div>
+        <div>
+          <label for="offset">Décalage</label><input v-model="offset" id="offset" name="offset" type="number" placeholder="Décalage" />
+        </div>
+        <div>
+          <label for="output">Valeur à chiffrer</label><input v-model="output" id="output" name="output" type="text" placeholder="Texte à déchiffrer" />
+        </div>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script type="text/javascript" src="cesar.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
