@@ -9,8 +9,29 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> 
 </head>
 <body>
+    <!-- Mount point for the application. -->
     <div id="app">
-        <!-- Mount point for the application. -->
+        <form action="" v-on:submit.prevent="addToDo()">
+            <input type="text" name="title" v-model="title"/>
+            <input type="text" name="content" v-model="content"/>
+            <input type="date" name="deadline" v-model="deadline"/>
+            <select name="category" v-model="category">
+                <option v-for="cat in categories">{{ cat }}</option>
+            </select>
+            <button type="submit">Ajouter todo</button>
+        </form>
+        <div>
+            <input type="text" @keyup.enter="addCategory()" v-model="newCategory" />
+        </div>
+        <div class="todoList">
+            <todo v-for="t in displayTodos" v-bind:task="t" @remove="removeTodo($event)"></todo>
+        </div>
+        <div>
+            <label for="showArchives">Afficher les tâches archivées</label><input type="checkbox" id="showArchives" v-model="showArchives"/>
+            <div class="archives" v-if="showArchives">
+                <todo v-for="t in archivedTodos" v-bind:task="t" @remove="removeTodo($event)"></todo>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>

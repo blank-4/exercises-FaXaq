@@ -1,0 +1,47 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+#app {
+    display:flex;
+    justify-content: space-around;
+}
+
+.todoList{
+    background-color: wheat;
+    width: 25%;
+    height: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.border {
+    border: solid 1px black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.finished {
+    background-color : grey;
+    color : lightgray;
+}
+
+.finished * {
+    display:none;
+}
+
+.finished h2, .finished input {
+    display:block;
+}
+
+.finished h2::after {
+    content: " (fini!)"
+}
