@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 Formulaire GET
+  form(method="GET", action="/form")
+    input(type="text", name="user", placeholder="Username")
+    br
+    input(type="password", name="pass", placeholder="Password")
+    br
+    input(type="submit", value="Envoyer!")
+
+  h2 Formulaire POST
+  form(method="POST", action="/form")
+    input(type="text", name="user", placeholder="Username")
+    br
+    input(type="password", name="pass", placeholder="Password")
+    br
+    input(type="submit", value="Envoyer !")
+
