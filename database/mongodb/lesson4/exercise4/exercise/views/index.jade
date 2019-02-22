@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  a(href="/signup") S'inscrire
+   - if (user)
+    a(href="/logout") Se deconnecter
+    a(href="/users/me") Mon profil
+   - else
+    a(href="/login") Se connecter
+  
+  
+  
+
