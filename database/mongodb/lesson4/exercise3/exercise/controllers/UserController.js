@@ -5,6 +5,7 @@ var bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 class UserController {
+
     create(req, res, next) {
         var errors = [];
         if (req.body.email == "" || emailValidator.validate(req.body.email) == false) {
@@ -29,13 +30,14 @@ class UserController {
           bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
             if (err) {
               res.send(err);
-            } else {
-              var user = new User({    
-                username: req.body.username, 
-                firstname: req.body.firstname,
-                lastname: req.body.lastname,
-                email: req.body.email, 
-                password: hash
+              return;
+            }
+            var user = new User({    
+              username: req.body.username, 
+              firstname: req.body.firstname,
+              lastname: req.body.lastname,
+              email: req.body.email, 
+              password: hash
             });
             user.save()
                 .then(function(newUser) {
@@ -44,12 +46,28 @@ class UserController {
                 .catch(function(err) {
                     res.send(err);
                 });
-            }
           });
         } else {
           res.send(errors);
         }
     }
+
+    /**
+     * Checks a passowrd, passport style
+     * @param {*} user the user
+     * @param {*} password the password
+     * @param {*} done passport-style done
+     */
+    verify(user, password, done) {
+      bcrypt.compare(password, user.password, function(err, res) {
+        if (res) {
+          done(null, user);
+        } else {
+          done(null, false, { message: 'Incorrect password.' });
+        }
+      });
+    }
+
 }
 
 module.exports = new UserController();

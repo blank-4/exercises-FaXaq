@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 S'inscrire
+  form(action="/" method="POST")
+    label(for="username") Nom d'utilisateur
+    input(id="username", type="text", name="username", required)
+    label(for="firstname") Prénom
+    input(id="firstname", type="text", name="firstname")
+    label(for="lastname") Nom
+    input(id="lastname", type="text", name="lastname")
+    label(for="email") Adresse email
+    input(id="email", type="email", name="email", required)
+    label(for="password") Mot de passe
+    input(id="password", type="password", name="password", required)
+    label(for="passwordConfirmation") Confirmation du mot de passe
+    input(id="passwordConfirmation", type="password", name="passwordConfirmation", required)
+    input(type="submit")

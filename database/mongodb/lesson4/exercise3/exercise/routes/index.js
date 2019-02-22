@@ -1,10 +1,9 @@
 var UserController = require("../controllers/UserController.js");
 
 var express = require('express');
-var emailValidator = require("email-validator");
-var bcrypt = require('bcrypt');
-const saltRounds = 10;
 var router = express.Router();
+
+var passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -12,5 +11,22 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', UserController.create);
+
+router.post('/login', 
+  passport.authenticate('local', { 
+    successRedirect: '/',
+    failureRedirect: '/login'
+  })
+);
+
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Express' });
+});
+
+router.get('/signup', function(req, res, next) {
+  res.render('signup', { title: 'Express' });
+});
+
+
 
 module.exports = router;
